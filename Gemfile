@@ -3,9 +3,13 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.4'
+gem 'bcrypt-ruby', '3.0.1'
+#gem 'geokit-rails3'
 
 group :development do
-  gem 'sqlite3', '1.3.8'
+#  gem 'sqlite3', '1.3.5'
+  gem 'mysql'
+  gem 'rspec-rails', '2.11.0'
 end
 
 gem 'sass-rails', '4.0.1'
