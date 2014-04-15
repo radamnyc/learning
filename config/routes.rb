@@ -1,5 +1,5 @@
 DineApp::Application.routes.draw do
-
+  get "users/new"
 #  get "static_pages/home"
 #    get "static_pages/help"
 #    get "static_pages/about"
@@ -8,7 +8,6 @@ DineApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
     
-    resources :events
   resources :users
   resources :events
 

@@ -35,4 +35,6 @@ DineApp::Application.configure do
   
   
   config.eager_load = false;
+  # Speed up tests by lowering bcrypt's cost function.
+    ActiveModel::SecurePassword.min_cost = true
 end
