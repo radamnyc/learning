@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     validates :password_confirmation, presence: true
       
    before_save { |user| user.email = email.downcase }
-   before_save { |user| user.guid = user.guid = SecureRandom.uuid }  
+   before_create { |user| user.guid = SecureRandom.uuid }  
     
   default_scope { where(:logical_delete => "N") }
     
