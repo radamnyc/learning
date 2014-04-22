@@ -25,8 +25,9 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    Rails.logger.debug "starting the create with #{@user.to_yaml}"
     respond_to do |format|
+      Rails.logger.debug "starting teh loop"
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
